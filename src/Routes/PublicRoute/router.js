@@ -31,13 +31,16 @@ export const router = createBrowserRouter([
       {
         path: "courses",
         element: <Courses></Courses>,
-        loader: () => fetch("https://techportal-server.vercel.app/courses"),
+        loader: () =>
+          fetch("https://learn-with-fun-server-three.vercel.app/courses"),
       },
       {
         path: "course/:id",
         element: <CourseDetails></CourseDetails>,
         loader: ({ params }) =>
-          fetch(`https://techportal-server.vercel.app/courses/${params.id}`),
+          fetch(
+            `https://learn-with-fun-server-three.vercel.app/courses/${params.id}`
+          ),
       },
       {
         path: "/checkout/:id",
@@ -47,7 +50,9 @@ export const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://techportal-server.vercel.app/courses/${params.id}`),
+          fetch(
+            `https://learn-with-fun-server-three.vercel.app/courses/${params.id}`
+          ),
       },
       {
         path: "profile",
